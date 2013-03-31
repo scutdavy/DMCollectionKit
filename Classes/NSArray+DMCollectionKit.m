@@ -61,12 +61,16 @@
 }
 
 - (NSUInteger)indexOfObjectMatching:(DMValidationBlock) block{
+    NSParameterAssert(block);
+    
     return [self indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
         return block(obj);
     }];
 }
 
 - (NSUInteger)countOfObjectMatching:(DMValidationBlock) block{
+    NSParameterAssert(block);
+    
     return [[self indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
         return block(obj);
     }] count];
