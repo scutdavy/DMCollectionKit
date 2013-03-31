@@ -20,7 +20,9 @@
 		BC9EED831707C3BB0051BDF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9EED631707C3BA0051BDF5 /* UIKit.framework */; };
 		BC9EED841707C3BB0051BDF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9EED651707C3BB0051BDF5 /* Foundation.framework */; };
 		BC9EED8C1707C3BB0051BDF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC9EED8A1707C3BB0051BDF5 /* InfoPlist.strings */; };
-		BC9EED8F1707C3BB0051BDF5 /* CollectionKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9EED8E1707C3BB0051BDF5 /* CollectionKitTests.m */; };
+		BC9EED9B1707C4140051BDF5 /* NSArray+DMCollectionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9EED9A1707C4140051BDF5 /* NSArray+DMCollectionKit.m */; };
+		BC9EED9C1707C4140051BDF5 /* NSArray+DMCollectionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9EED9A1707C4140051BDF5 /* NSArray+DMCollectionKit.m */; };
+		BC9EED9F1707C5B90051BDF5 /* TestArray.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9EED9E1707C5B90051BDF5 /* TestArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +53,10 @@
 		BC9EED811707C3BB0051BDF5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		BC9EED891707C3BB0051BDF5 /* CollectionKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CollectionKitTests-Info.plist"; sourceTree = "<group>"; };
 		BC9EED8B1707C3BB0051BDF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BC9EED8D1707C3BB0051BDF5 /* CollectionKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionKitTests.h; sourceTree = "<group>"; };
-		BC9EED8E1707C3BB0051BDF5 /* CollectionKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionKitTests.m; sourceTree = "<group>"; };
+		BC9EED991707C4140051BDF5 /* NSArray+DMCollectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DMCollectionKit.h"; sourceTree = "<group>"; };
+		BC9EED9A1707C4140051BDF5 /* NSArray+DMCollectionKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DMCollectionKit.m"; sourceTree = "<group>"; };
+		BC9EED9D1707C5B90051BDF5 /* TestArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestArray.h; sourceTree = "<group>"; };
+		BC9EED9E1707C5B90051BDF5 /* TestArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		BC9EED571707C3BA0051BDF5 = {
 			isa = PBXGroup;
 			children = (
+				BC9EED981707C3EB0051BDF5 /* Classes */,
 				BC9EED691707C3BB0051BDF5 /* CollectionKit */,
 				BC9EED871707C3BB0051BDF5 /* CollectionKitTests */,
 				BC9EED621707C3BA0051BDF5 /* Frameworks */,
@@ -136,9 +141,9 @@
 		BC9EED871707C3BB0051BDF5 /* CollectionKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				BC9EED8D1707C3BB0051BDF5 /* CollectionKitTests.h */,
-				BC9EED8E1707C3BB0051BDF5 /* CollectionKitTests.m */,
 				BC9EED881707C3BB0051BDF5 /* Supporting Files */,
+				BC9EED9D1707C5B90051BDF5 /* TestArray.h */,
+				BC9EED9E1707C5B90051BDF5 /* TestArray.m */,
 			);
 			path = CollectionKitTests;
 			sourceTree = "<group>";
@@ -150,6 +155,15 @@
 				BC9EED8A1707C3BB0051BDF5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC9EED981707C3EB0051BDF5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BC9EED991707C4140051BDF5 /* NSArray+DMCollectionKit.h */,
+				BC9EED9A1707C4140051BDF5 /* NSArray+DMCollectionKit.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +278,7 @@
 			files = (
 				BC9EED701707C3BB0051BDF5 /* main.m in Sources */,
 				BC9EED741707C3BB0051BDF5 /* DMAppDelegate.m in Sources */,
+				BC9EED9B1707C4140051BDF5 /* NSArray+DMCollectionKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC9EED8F1707C3BB0051BDF5 /* CollectionKitTests.m in Sources */,
+				BC9EED9C1707C4140051BDF5 /* NSArray+DMCollectionKit.m in Sources */,
+				BC9EED9F1707C5B90051BDF5 /* TestArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
